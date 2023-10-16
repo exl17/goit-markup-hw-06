@@ -61,44 +61,49 @@ img {
 }
 
 .header .section-nav {
-display: flex;
-gap: 40px;
-align-items: center;
+    display: flex;
+    gap: 40px;
 
 }
-.link-one {
-        font-family: Roboto;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        padding: 24px 0;
+
+.section-nav {
+display: flex;
+align-items: center;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 151px;
+        
+}
+
+
+.menu .link-one {
+font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
     position: relative;
     color: #404bbf;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu .link-one::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 4px;
-    background-color: #404bbf;
-    border-radius: 2px;
-    width: 48px;
-    flex-shrink: 0;
-
-
+.menu .link {
+    color: #2e2f42;
+        font-family: Roboto;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.72px;
+        text-transform: capitalize;
 }
 
-
-.menu {
-    display: flex;
-    gap: 40px;
-    display: none;      
-}
 
 .button-solid-menu {
     border: transparent;
@@ -107,14 +112,83 @@ align-items: center;
 }
 
 
+.mob-menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 72px 153px 40px 16px;
+    
+
+}
+
+
+
 .social-media-list-mob {
     display: flex;
     gap: 40px;
+    
 }
 
 .social-media-list-li-mob {
     width: 40px;
-    height: 40px;
+        height: 40px;
+
+}
+
+.close-button-mob {
+
+    border-radius: 50%;
+    background-color: transparent;
+    stroke-width: 1px;
+    border-color: rgba(0, 0, 0, 0.10);
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 24px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+
+}
+
+.close-button-mob:hover {
+    background-color: #404BBF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+}
+
+.close-button-mob:focus {
+    background-color: #404BBF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+
+}
+
+
+.close-button-mob:hover .icon-close-mob {
+    fill: white;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button-mob:focus .icon-close-mob {
+    fill: white;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.icon-close-mob {
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -134,16 +208,6 @@ align-items: center;
     margin-right: 76px;
 }
 
-.link {
-    color: #2e2f42;
-        font-family: Roboto;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        padding: 24px 0; 
-}
 
 .list-color-two .link:hover, .link:active {
     background-color: #404bbf;
@@ -152,9 +216,6 @@ align-items: center;
 .list-color-two .link:focus {
     background-color: #404bbf;
 }
-
-
-
 
 
 .section-nav .link {
@@ -167,31 +228,48 @@ align-items: center;
 }
 
  .address {
-    color: 2e2f42;
-font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;  
-    
-} 
+     color: #2e2f42;
+     font-family: Roboto;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: 1.5;
+     letter-spacing: 0.02em;
+
+ }
+
+.menu-one {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    padding-top: 168px;
+}
+
+.link-address-tel {
+    color: #4D5AE5;
+        font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0.4px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .link-address {
     color: #434455;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    line-height: 24px;
+    letter-spacing: 0.4px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+
+
 }
 
-.address .link-address:hover, .address .link-address:focus, .address .link-address:active {
-    color: #404bbf
-}
+
 
 .body-name {
         font-family: 'Roboto', sans-serif;
@@ -290,6 +368,8 @@ border-radius: 4px;
 
 .icon-one {
     fill: #f4f4fd;
+    width: 40px;
+    
 }
 
 .list-color-two {
@@ -989,7 +1069,63 @@ display: inline-flex;
 
 
 @media screen and (min-width: 1158px) {
+  
+    .menu .link-one::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 4px;
+            background-color: #404bbf;
+            border-radius: 2px;
+            width: 48px;
+            flex-shrink: 0;
     
+        }
+
+                .link-one {
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    letter-spacing: 0.02em;
+                    padding: 24px 0;
+                    position: relative;
+                    color: #404bbf;
+                    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                }
+
+                                .link {
+                                    color: #2e2f42;
+                                    font-family: Roboto;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 1.5;
+                                    letter-spacing: 0.02em;
+                                    padding: 24px 0;
+                                }
+   .link-address {
+       color: #434455;
+       font-family: Roboto;
+       font-size: 20px;
+       font-style: normal;
+       font-weight: 500;
+       line-height: 24px;
+       letter-spacing: 0.4px;
+       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+   }
+
+                                                             
+        .address .link-address:hover,
+        .address .link-address:focus,
+        .address .link-address:active {
+            color: #404bbf
+        }
+
     .title-name-one {
         color: var(--WHITE, #FFFFFF);
             font-size: 36px;
