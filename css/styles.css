@@ -1,4 +1,3 @@
-
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
@@ -26,7 +25,7 @@ img {
 .container {
     width: 320px;
     margin: 0 auto;
-    padding: 0 15px;
+        padding: 0 15px;
     
 }
 
@@ -112,32 +111,21 @@ font-family: Roboto;
 }
 
 
-.mob-menu {
+.menu-mob {
     width: 100vw;
     height: 100vh;
     background-color: #FFF;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-    padding: 72px 153px 40px 16px;
-    
+    z-index: 100;
+    padding: 72px 110px 40px 16px;
+    opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
 
 }
 
-
-
-.social-media-list-mob {
-    display: flex;
-    gap: 40px;
-    
-}
-
-.social-media-list-li-mob {
-    width: 40px;
-        height: 40px;
-
-}
 
 .close-button-mob {
 
@@ -242,7 +230,7 @@ font-family: Roboto;
     display: flex;
     gap: 24px;
     flex-direction: column;
-    padding-top: 168px;
+    padding: 168px 0;
 }
 
 .link-address-tel {
@@ -269,7 +257,18 @@ font-family: Roboto;
 
 }
 
+.social-media-list-mob {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
 
+}
+
+.social-media-list-li-mob {
+    width: 40px;
+    height: 40px;
+}
 
 .body-name {
         font-family: 'Roboto', sans-serif;
@@ -574,7 +573,7 @@ cursor: pointer;
 .footer {
     background: var(--NAVY-BLUE, #2E2F42);
 padding: 97px 0;
-width: max-content;
+
 }
 
 
@@ -598,6 +597,9 @@ width: max-content;
 .social-media-list {
     display: flex;
     gap: 16px;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .social-media {
@@ -607,12 +609,16 @@ width: max-content;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    margin-top: 72px;
+    text-align: center;
 
 }
 
 .social-media-list-li {
     width: 40px;
     height: 40px;
+    margin-bottom: 16px;
+    
     
 }
 
@@ -631,6 +637,7 @@ color: var(--CLOUD, #F4F4FD);
     line-height: 24px;
     letter-spacing: 0.32px;
     width: 288px;
+    margin-top: 16px;
 }
 .name-company-footer {
     color: #F4F4FD;
@@ -644,18 +651,15 @@ color: var(--CLOUD, #F4F4FD);
 }
 
 .url-footer {
-    color: #4D5AE5;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 0.54px;
-    text-transform: uppercase;
-    display: flex;
-    gap: 0;
-    display: inline-block;
-    margin-bottom: 16px;
+    color: var(--IRIS, #4D5AE5);
+        font-family: Raleway, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
 }
 
 .link-footer-icon {
@@ -682,9 +686,12 @@ color: var(--CLOUD, #F4F4FD);
     
 }
 .container-footer {
-
-margin-left: 16px;
-margin-right: 16px;
+color: var(--CLOUD, #F4F4FD);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    max-width: 288px;
+    margin-top: 17.5px;
 
 
 }
@@ -697,10 +704,12 @@ margin-right: 16px;
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
+    text-align: center;
+    margin-top: 72px;
 }
 
 .footer-bottom {
-margin-left: 120px;
+
 }
 
 .footer-email {
@@ -718,7 +727,8 @@ margin-left: 120px;
             letter-spacing: 0.04em;
             padding-left: 16px;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-
+    opacity: 0.3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
             
             
 }
@@ -748,15 +758,17 @@ min-width: 165px;
     letter-spacing: 0.04em;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    display: flex;
+    display: inline-flex;
     padding: 8px 24px;
     align-items: center;
-    justify-content: center;
-    
+        justify-content: center;
+        text-align: center;
     border: none;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-family: "Roboto", sans-serif;
+    margin-top: 16px;
+    
 
     
 }
@@ -769,10 +781,13 @@ min-width: 165px;
 
 
 .footer-form {
-    display: flex;
-    gap: 24px;
-
+    
+gap: 24px;
+display: block;
+text-align: center;
 }
+
+
 
 .icon-subscribe {
     margin-left: 16px;
@@ -1245,6 +1260,7 @@ width: calc((100% - 72px) / 4);
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.32px;
+    
 }
 
 .container-footer {
