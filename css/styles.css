@@ -1245,9 +1245,7 @@ text-align: left;
 
    }
 
-   .subcribe-paragraph {
-       text-align: left;
-   }
+ 
 
    
    .footer-form {
@@ -1429,7 +1427,9 @@ font-size: 20px;
 .subcribe-paragraph {
     margin-left: 80px;
         margin-top: 0px;
+        text-align: left;
 }
+
 
 .footer-email {
 
